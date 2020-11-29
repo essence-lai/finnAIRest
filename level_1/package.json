@@ -1,0 +1,12 @@
+{
+  "name": "level_1",
+  "version": "1.0.0",
+  "description": "Finn AI level 1 test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Essence Lai <essencelai@gmail.com>",
+  "license": "ISC"
+}
