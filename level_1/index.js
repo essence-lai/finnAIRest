@@ -4,8 +4,7 @@ import bodyParser from 'body-parser';
 import usersRoutes from './routes/users.js';
 import idRoutes from './routes/id.js'
 
-const app = express(),
-    PORT = 5000;
+const app = express();
 
 app.use(bodyParser.json());
 
@@ -16,5 +15,4 @@ app.use('/id', idRoutes);
 app.get('/', (req, res) => res.send('Hi FinnAI'));
 
 //GET ID: Returns universally unique identifier
-
-app.listen(PORT, () => console.log(`Server is running on port: http://localhost:${ PORT }`));
+export default app;

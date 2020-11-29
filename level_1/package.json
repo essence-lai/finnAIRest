@@ -3,19 +3,39 @@
   "version": "1.0.0",
   "description": "Finn AI level 1 test",
   "type": "module",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon main.js",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "keywords": [],
   "author": "Essence Lai <essencelai@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "express": "^4.17.1",
     "lodash": "^4.17.20",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
   }
 }
